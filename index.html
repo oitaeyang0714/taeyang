@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oi, TaeYang</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/album.css">
+</head>
+<body>
+
+<section class="hero">
+
+<div class="slider">
+
+    <div class="slides">
+        <img src="./img/taeyang01.jpg" class="active">
+        <img src="./img/taeyang02.jpg">
+        <img src="./img/taeyang03.jpg">
+        <img src="./img/taeyang04.jpg">
+        <img src="./img/taeyang05.jpg">
+    </div>
+
+    <!-- 어두운 감성 오버레이 -->
+    <div class="overlay"></div>
+
+    <!-- 텍스트 -->
+    <div class="hero-text">
+        <h1>Oi, TaeYang</h1>
+        <p>눈이 예쁜 혼혈 아기, 태양이</p>
+    </div>
+
+    <!-- 스크롤 유도 -->
+    <div class="scroll-down"></div>
+
+</div>
+
+</section>
+
+
+<section class="party-section">
+
+    <h2 class="party-title">Profile</h2>
+    <p class="party-sub">태양이의 상세 프로필</p>
+
+    <div class="party-grid">
+
+        <div class="party-card">
+            <img src="./img/taeyang01.jpg">
+            <h3>양태양 • Korea/Brazil</h3>
+            <span>Name • Nationality</span>
+            <p>
+                눈이 크고 코가 오똑한 예쁜 남아<br>
+                동양 한국인과 백인 브라질인의 혼혈
+            </p>
+        </div>
+
+        <div class="party-card">
+            <img src="./img/taeyang02.jpg">
+            <h3>2025.07.14</h3>
+            <span>Birth</span>
+            <p>
+                하지만 2달 일찍 태어난 조산아로
+                <br>09.14로 계산하는 것이 맞습니다.
+                <br>- 07.14 기준 : 7개월 / 09.14 기준 : 5개월
+            </p>
+        </div>
+
+        <div class="party-card">
+            <img src="./img/taeyang03.jpg">
+            <h3>68cm • 6.8kg</h3>
+            <span>BODY</span>
+            <p>
+                키 68cm<br>
+                몸무게 6.8kg
+            </p>
+        </div>
+
+        <div class="party-card">
+            <img src="./img/taeyang03.jpg">
+            <h3>Seoul, Korea</h3>
+            <span>Residence</span>
+            <p>
+                서울 은평구 (연신내역 근처)
+            </p>
+        </div>
+        
+        <div class="party-card">
+            <img src="./img/taeyang03.jpg">
+            <h3>Nap Time</h3>
+            <span>Nap Time</span>
+            <p>
+                일정하지 않습니다.<br>보통 밖에 나가거나 차를 타면 대부분 잠을 잡니다.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="gallery">
+    <div class="title">
+        <p>2025.01.29</p>
+        비비유어러브 모델 촬영
+    </div>
+
+    <div class="grid">
+
+    <img src="./img/taeyang01.jpg" data-date="촬영일 2026.01.29">
+    <img src="./img/taeyang02.jpg" data-date="촬영일 2026.01.29">
+    <img src="./img/taeyang03.jpg" data-date="촬영일 2026.01.29">
+    <img src="./img/taeyang04.jpg" data-date="촬영일 2026.01.29">
+    <img src="./img/taeyang05.jpg" data-date="촬영일 2026.01.29">
+    <img src="./img/taeyang06.jpg" data-date="촬영일 2026.01.29">
+    <img src="./img/taeyang07.jpg" data-date="촬영일 2026.01.29">
+    <img src="./img/taeyang08.jpg" data-date="촬영일 2026.01.29">
+
+    </div>
+</section>
+
+<section class="quote-section">
+    <p class="quote-text">
+        낯을 가리지 않으며 사람을 좋아하고<br>
+        주변 환경에 대한 적응이 빠른 편입니다.
+    </p>
+</section>
+
+
+<section class="gallery">
+    <div class="title">
+        <p>2025.01.27</p>
+        노원사진관 촬영
+    </div>
+
+    <div class="grid">
+        <img src="./img/taeyang09.jpg" data-date="촬영일 2026.01.27">
+        <img src="./img/taeyang10.jpg" data-date="촬영일 2026.01.27">
+        <img src="./img/taeyang11.jpg" data-date="촬영일 2026.01.27">
+        <img src="./img/taeyang12.jpg" data-date="촬영일 2026.01.27">
+    </div>
+</section>
+
+
+<!-- 모달 -->
+<div class="modal" id="modal">
+
+    <button class="nav prev">&#10094;</button>
+    <button class="nav next">&#10095;</button>
+
+    <span class="close">&times;</span>
+
+    <img class="modal-img" id="modalImg">
+
+    <div class="date" id="date"></div>
+
+    <div class="thumbs" id="thumbs"></div>
+
+</div>
+
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+        <div class="card">
+            <h4>Photography</h4>
+            <p>Professional photo sessions for every special moment.</p>
+        </div>
+        <div class="card">
+            <h4>Stories</h4>
+            <p>Bring your love story to life with visually rich narratives.</p>
+        </div>
+        <div class="card">
+            <h4>Consultation</h4>
+            <p>Personalized guidance for events, gifts, and more.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:oi.taeyang0714@gmail.com">oi.taeyang0714@gmail.com</a></p>
+    <p>Phone: <a href="tel:010-5659-7352">010-5659-7352</a></p>
+    <p><a href="blog.naver.com/oi-taeyang" target="_blank">Blog</a> • <a href="https://www.instagram.com/oi.taeyang/" target="_blank">Instagram</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Oi, TaeYang. All Rights Reserved.</p>
+</footer>
+
+</body>
+    <script src="./js/script.js"></script>
+    <script src="./js/album.js"></script>
+</html>

@@ -1,0 +1,181 @@
+
+@font-face {
+    font-family: 'GangwonEducationModuche';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    font-family: 'GangwonEducationModuche', sans-serif;
+    color: #333;
+    background: #fff;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+/******/
+.hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+/* 슬라이드 */
+.slider{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.slides img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transform:scale(1.15);
+    transition:
+        opacity 1.6s ease,
+        transform 7s ease;
+}
+
+.slides img.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+/* 어두운 필름 느낌 */
+.overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(to bottom,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.25),
+        rgba(0,0,0,0.5));
+    z-index:2;
+}
+
+/* 텍스트 */
+.hero-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    z-index:3;
+}
+
+.hero-text h1{
+    opacity:0;
+    animation:fadeUpText 1.5s .4s forwards;
+}
+
+.hero-text p{
+    opacity:0;
+    animation:fadeUpText 1.5s .9s forwards;
+}
+
+
+/* 등장 애니메이션 */
+@keyframes fadeUpText{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* 스크롤 표시 */
+.scroll-down{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    width:24px;
+    height:40px;
+    border:2px solid white;
+    border-radius:20px;
+    z-index:3;
+}
+
+.scroll-down::after{
+    content:"";
+    position:absolute;
+    top:8px;
+    left:50%;
+    transform:translateX(-50%);
+    width:4px;
+    height:8px;
+    background:white;
+    border-radius:4px;
+    animation:scroll 1.5s infinite;
+}
+
+@keyframes scroll{
+    0%{opacity:0; top:8px;}
+    50%{opacity:1;}
+    100%{opacity:0; top:22px;}
+}
+
+/* Sections */
+.section {
+    padding: 80px 40px;
+    text-align: center;
+}
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    width: 280px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #9f6d20;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    background: #f9f9f9;
+    font-size: 0.9rem;
+}
