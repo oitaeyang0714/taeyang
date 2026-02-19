@@ -32,6 +32,26 @@ body {
     line-height: 1.7;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:active {
+  opacity: 0.6;
+}
+
+.highlight {
+  background: linear-gradient(
+    0deg,
+    rgb(255 204 204 / 70%) 0%,
+    rgb(255 204 204 / 70%) 100%
+  );
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
 /* ────────────────────────────────────────────
    HEADER
 ──────────────────────────────────────────── */
@@ -189,6 +209,7 @@ nav a:hover::after {
 /* 제목 */
 .party-title{
     font-size:3rem;
+    font-weight: 500;
     margin-bottom:10px;
     color:#333;
 }
@@ -238,7 +259,7 @@ nav a:hover::after {
 }
 
 /* 역할 */
-.party-card span{
+.party-card > span{
     font-size:1rem;
     letter-spacing:2px;
     color:#696969;
@@ -248,7 +269,7 @@ nav a:hover::after {
 
 /* 설명 */
 .party-card p{
-    font-size:.95rem;
+    font-size:1.1rem;
     color:#111;
     line-height:1.6;
     max-width:240px;
@@ -285,8 +306,8 @@ footer {
 
 /* RESPONSIVE */
 @media(max-width:800px) {
-    .hero-text h1 { font-size: 2.8rem; }
-    .hero-text p  { font-size: 1.1rem; }
+    .hero-text h1 { font-size: 1.2rem; margin: 0;}
+    .hero-text p  { font-size: 1rem; }
     .cards { gap: 20px; }
 }
 
@@ -364,4 +385,115 @@ footer {
 .quote-section.show{
     opacity:1;
     transform:translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero, .slides img {
+        height: 500px;
+    }
+    .hero-text {
+        justify-content: end;
+        margin-bottom: 100px;
+    }
+    .party-section {
+        padding: 50px 20px;
+    }
+    .party-title, section .title {
+        font-size: 2rem !important;
+        margin: 0;
+    }
+    .party-sub {
+        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+  .party-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .party-grid::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨기기 */
+  }
+
+  .party-card {
+    flex: 0 0 70%;   /* 화면에 약 2개 보이게 */
+    scroll-snap-align: start;
+    padding: 20px;
+  }
+  .party-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 0;
+  }
+  .party-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+  }
+  .party-card > span {
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .party-card p {
+    font-size: 1rem;
+  }
+  div.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  div.grid img {
+    height: 200px;
+  }
+  section.quote-section {
+    padding: 110px 20px;
+  }
+  .quote-section .quote-text {
+    font-size: 1.2rem;
+  }
+  .quote-section .quote-text::before {
+    left: -5px;
+  }
+  .quote-section .quote-text::after {
+    right: -5px;
+  }
+  section.polaroid-album {
+    display: flex;
+    flex-wrap: nowrap;              /* 줄바꿈 방지 */
+    overflow-x: auto;               /* 가로 스크롤 */
+    gap: 16px;
+    padding: 10px 20px;
+    scroll-snap-type: x mandatory;  /* 스냅 효과 */
+    -webkit-overflow-scrolling: touch;
+    justify-content: left;
+    margin: 0 20px;
+  }
+
+  section.polaroid-album::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨기기 */
+  }
+
+  section.polaroid-album > a {
+    flex: 0 0 70%;   /* 화면에 2개 정도 보이게 */
+    scroll-snap-align: start;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  div.polaroid {
+    width: 100%;
+    background: #fff;
+    padding: 14px;
+  }
+
+  div.polaroid img {
+    width: 100%;
+    height: 200px;
+  }
 }
